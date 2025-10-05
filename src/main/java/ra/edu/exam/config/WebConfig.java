@@ -1,4 +1,4 @@
-package ra.edu.final_exam_javaweb.config;
+package ra.edu.exam.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

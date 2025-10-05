@@ -1,4 +1,4 @@
-package ra.edu.final_exam_javaweb.controller;
+package ra.edu.exam.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ra.edu.final_exam_javaweb.dto.request.FlightRequestCreateDTO;
-import ra.edu.final_exam_javaweb.model.Flight;
-import ra.edu.final_exam_javaweb.service.FlightService;
+import ra.edu.exam.dto.request.FlightRequestCreateDTO;
+import ra.edu.exam.model.Flight;
+import ra.edu.exam.service.FlightService;
 
 import javax.validation.Valid;
 import java.util.List;

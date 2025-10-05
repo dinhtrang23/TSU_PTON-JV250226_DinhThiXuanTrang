@@ -29,17 +29,17 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${listFlight}" var="fight" varStatus="loop">
+        <c:forEach items="${listFlights}" var="flight" varStatus="loop">
             <tr>
                 <td>${loop.index+1}</td>
-                <td>${loop.flightId}</td>
-                <td>${loop.fightName}</td>
-                <td>${loop.startingPoint}</td>
-                <td>${loop.destination}</td>
-                <td>${loop.departureDate}</td>
-                <td>${loop.travelTime}</td>
-                <td>${loop.TimeUnit}</td>
-                <td><img src="${flight.image}" width="100" height="100" alt="${fight.flightName}"/></td>
+                <td>${flight.fligtId}</td>
+                <td>${flight.fightName}</td>
+                <td>${flight.startingPoint}</td>
+                <td>${flight.destination}</td>
+                <td>${flight.departureDate}</td>
+                <td>${flight.travelTime}</td>
+                <td>${flight.TimeUnit}</td>
+                <td><img src="${flight.image}" width="100" height="100" alt="${flight.flightName}"/></td>
                 <td>
                     <c:choose>
                         <c:when test="${flight.status == 0}">Hủy bỏ</c:when>
@@ -52,6 +52,6 @@
         </c:forEach>
         </tbody>
     </table>
-    <a href= "<%=request.getContextPath()%>/flightController/initCreate">Create new Flight..."</a>
+    <a href= "<%=request.getContextPath()%>/FlightController/initCreate">Create new Flight..."</a>
 </body>
 </html>

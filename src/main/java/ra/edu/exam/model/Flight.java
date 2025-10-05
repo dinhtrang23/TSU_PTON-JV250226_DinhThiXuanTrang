@@ -1,4 +1,4 @@
-package ra.edu.final_exam_javaweb.model;
+package ra.edu.exam.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,7 +41,6 @@ public class Flight {
     private String travelImage;
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private int status;
-
 
 
 

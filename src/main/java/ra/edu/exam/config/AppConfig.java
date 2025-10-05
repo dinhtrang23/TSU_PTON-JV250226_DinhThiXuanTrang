@@ -1,10 +1,9 @@
-package ra.edu.final_exam_javaweb.config;
+package ra.edu.exam.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -22,15 +21,15 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"ra.edu.final_exam_javaweb.controller","ra.edu.final_exam_javaweb.service.imp","ra.edu.final_exam_javaweb.repository.imp"})
+@ComponentScan(basePackages = {"ra.edu.exam.controller", "ra.edu.exam.service.imp", "ra.edu.exam.repository.imp"})
 @EnableTransactionManagement
 public class AppConfig {
     @Bean
     public ViewResolver viewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/views/");
-        viewResolver.setSuffix(".jsp");
-        return viewResolver;
+        InternalResourceViewResolver Resolver = new InternalResourceViewResolver();
+        Resolver.setPrefix("/views/");
+        Resolver.setSuffix(".jsp");
+        return Resolver;
     }
 
     @Bean
@@ -55,7 +54,7 @@ public class AppConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource());
-        entityManagerFactory.setPackagesToScan("ra.edu.final_exam_javaweb.model");
+        entityManagerFactory.setPackagesToScan("ra.edu.exam.model");
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
         entityManagerFactory.setJpaProperties(additionalProperties());

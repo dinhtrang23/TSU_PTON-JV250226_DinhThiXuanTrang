@@ -1,6 +1,7 @@
-package ra.edu.final_exam_javaweb.repository;
+package ra.edu.exam.repository;
 
-import ra.edu.final_exam_javaweb.model.Flight;
+import org.springframework.transaction.annotation.Transactional;
+import ra.edu.exam.model.Flight;
 
 import java.util.List;
 
@@ -9,5 +10,6 @@ public interface FlightRepository {
     Flight findById(int id);
     boolean create(Flight flight);
     boolean update(Flight flight);
-    boolean delete(String flightId);
+    boolean delete(int flightId);
+
 }

@@ -1,16 +1,16 @@
-package ra.edu.final_exam_javaweb.repository.imp;
+package ra.edu.exam.repository.imp;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ra.edu.final_exam_javaweb.model.Flight;
-import ra.edu.final_exam_javaweb.repository.FlightRepository;
+import ra.edu.exam.model.Flight;
+import ra.edu.exam.repository.FlightRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
-import java.util.Locale;
+
 @Repository
-public abstract class FlightRepositoryImp implements FlightRepository {
+public class FlightRepositoryImp implements FlightRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -42,8 +42,8 @@ public abstract class FlightRepositoryImp implements FlightRepository {
         return false;
     }
 
-    @Override
     @Transactional
+    @Override
     public boolean delete(int flightId) {
         try{
             Flight flight = findById(flightId);
